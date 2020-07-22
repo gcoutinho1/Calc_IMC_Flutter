@@ -15,16 +15,40 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: Text("Calculadora IMC dart"),
-      centerTitle: true,
-      backgroundColor: Colors.yellow,
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.refresh),
-          onPressed: () {},
-        )
-      ],
-    ));
+      appBar: AppBar(
+        title: Text("Calculadora IMC dart"),
+        centerTitle: true,
+        backgroundColor: Colors.yellow,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: () {},
+          )
+        ],
+      ),
+      backgroundColor: Colors.green,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Icon(Icons.person, size: 120, color: Colors.white),
+          TextField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+                labelText: "Peso(kg)",
+                labelStyle: TextStyle(color: Colors.white)),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 25.0),
+          ),
+          TextField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+                labelText: "Altura(cm)",
+                labelStyle: TextStyle(color: Colors.white)),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 25.0),
+          ),
+        ],
+      ),
+    );
   }
 }
